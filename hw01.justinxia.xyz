@@ -1,0 +1,15 @@
+# referenced from Nat Tuck's lecture notes
+server {
+	listen 80;
+	listen [::]:80;
+
+        root /home/nonroot/www/hw01;
+
+	index hw01.html; 
+
+	server_name hw01.justinxia.xyz;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
